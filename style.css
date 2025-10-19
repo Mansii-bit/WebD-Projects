@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden; /* scrollbar remove kr deta h */
+}
+span{
+    background-image: "C:\Users\Mansi Singh\Desktop\id.jpg";
+    background: url("https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Butterfly-512.png");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    animation: animate 6s linear;
+}
+@keyframes animate {
+    0%{
+        transform: translate(-50% , -50%);
+        opacity: 1;
+        filter: hue-rotate(20deg);
+    }
+    100%{
+        transform: translate(-50% , -3000%);
+        opacity: 0;
+        filter: hue-rotate(810deg);
+    }
+}
