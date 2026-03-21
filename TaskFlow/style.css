@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f5;
+}
+
+/* Header */
+header {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.input-section input {
+    font-size: 15px;
+  padding: 10px;
+  width: 280px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-section button {
+  padding: 10px 15px;
+  font-size: 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Board */
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Columns */
+.column {
+  flex: 1;
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Column Title */
+.column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Task Card */
+.task-card {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task text */
+.task-card p {
+  font-size: 15px;
+}
+
+/* Buttons */
+.task-card button {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Progress section */
+.progress-container {
+  width: 100%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4CAF50;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
+  transition: width 0.3s ease;
+}
+
+/* Done style */
+.task-card.done {
+  background: #d4edda;
+  border-left: 5px solid #28a745;
+}
+
+/* Make columns stack on mobile */
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+  }
+}
+
+/* To Do Task - Button inline with text */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.todo-item button {
+  margin: 0;
+  padding: 4px 10px;
+  font-size: 13px;
+}
